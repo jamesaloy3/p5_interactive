@@ -20,6 +20,7 @@ body {
   margin-top: 15px;
   flex: 1 87.8% auto;
   display: inline-block;
+text-align: center;
 }
 h1.head {
   
@@ -53,7 +54,7 @@ h3 {
 
 #inputs {
   width: 85.18%;
-  height: 300px;
+  height: 8000px;
   border-width: 2.51px;
   border-color: #000000;
   border-style: solid;
@@ -92,7 +93,7 @@ h3 {
 }
 
 
-.foottext {
+#foottext {
   justify-content: center;
   text-align: center;
   width: auto;
@@ -104,9 +105,16 @@ h3 {
   text-decoration: none;
 }
 
-.input { width: 20px;
-	 margin: 8px 0;
-  box-sizing: border-box;
+.input {   
+    height: 20px;
+    position: relative;
+    left: 0;
+	margin-top: 20px;
+    outline: none;
+    border: 1px solid #cdcdcd;
+    border-color: #b2b2b2;
+    background-color: white;
+    font-size: 16px;
 }
 
 .slider {
@@ -120,6 +128,7 @@ h3 {
  
  /* -webkit-transition: .2s; */
   transition: opacity .2s;
+text-align: center;
 }	
 
 .slider::-webkit-slider-thumb {
@@ -134,7 +143,40 @@ h3 {
 
 #slide1 {
 	width: 100%;
+}
+
+#box1 {
+	display: flex;
+	flex-direction: row;
+}
+
+#in1 {
+	flex-grow: 1;
 	justify-content: center;
-	margin-left: auto;
 	
+}
+
+#in2 {
+	flex-grow: 1;
+	justify-content: center;
+	
+}
+#in3 {
+	flex-grow: 1;
+	justify-content: center;
+	
+}
+
+.links {target: _blank;
+	
+	 font-family: Arial;
+  color: #000000;
+font-size: 20px;
+	text-decoration: none;
+
+}
+
+.text {font-family: Arial;
+  color: #000000;
+	font-size: 20px;
 }

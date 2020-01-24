@@ -14,16 +14,16 @@ let bool = false;
 
 let bgRColorInput, bgBColorInput, bgGColorInput;
 
+let width1;
 function setup() {
   var canvasDiv = document.getElementById('centersketch');
-  var width = canvasDiv.clientWidth;
+  width1 = canvasDiv.clientWidth;
 
-  var cvn = createCanvas(width - 40, 400);
+  var cvn = createCanvas(width1 - 40, 400);
 
   cvn.parent('centersketch');
 
   background(0);
-
 
   sldr1 = createSlider(10, 255, 50);
   sldr2 = createSlider(10, 255, 50);
@@ -43,13 +43,13 @@ function setup() {
   bgRColorInput = createInput("255");
   bgGColorInput = createInput("255");
   bgBColorInput = createInput("255");
-  bgRColorInput.parent('box1');
-  bgGColorInput.parent('box1');
-  bgBColorInput.parent('box1');
+  bgRColorInput.parent('in1');
+  bgGColorInput.parent('in2');
+  bgBColorInput.parent('in3');
   //change size of items  
-  bgRColorInput.size(127.5);
-  bgGColorInput.size(127.5);
-  bgBColorInput.size(127.5);
+  bgRColorInput.size(50);
+  bgGColorInput.size(50);
+  bgBColorInput.size(50);
 
   bgRColorInput.class("input");
   bgGColorInput.class("input");
@@ -60,7 +60,8 @@ function setup() {
   //puts inputs and sliders in div
 
   //clues below canvas
-  clue1 = createP("16, 49, 64");
+  clue1 = createElement("h3", "16, 49, 64");
+	clue1.parent('foottext');
   //part1
   part1Setup();
   //part2 
@@ -79,10 +80,10 @@ function draw() {
   rectMode(CENTER);
   //rectangle
   fill(rectColor);
-  rect(200, 200, sldr2.value(), sldr3.value());
+  rect((width1-40)/2, 200, sldr2.value(), sldr3.value());
   //circle
   fill(circleColor);
-  circle(200, 200, sldr1.value());
+  circle((width1-40)/2, 200, sldr1.value());
   //first part of easter egg
   part1();
   //second part of easter egg
@@ -104,12 +105,14 @@ function part1Setup() {
   part1Input3 = createInput("");
   part1Input4 = createInput("");
   part1Input5 = createInput("");
-  part1Input1.size(127.5);
-  part1Input2.size(127.5);
-  part1Input3.size(127.5);
-  part1Input4.size(127.5);
-  part1Input5.size(127.5);
+  part1Input1.size(50);
+  part1Input2.size(50);
+  part1Input3.size(50);
+  part1Input4.size(50);
+  part1Input5.size(50);
   //inserts them into div 
+	part1Link.class('links');
+	part1P.class('text')
   part1P.parent('inputs');
   part1Link.parent('inputs');
   part1Input1.parent('inputs');
@@ -145,12 +148,14 @@ function part2Setup() {
   part2P = createP("Nice Job! Now can you find the next clue?");
   part2Input1 = createInput("");
   part2Input1.size(127.5);
+	part2P.class('text');
   //inserts them into div 
-  part2P.parent("AfterSketchPart1");
-  part2Input1.parent("AfterSketchPart1");
+  part2P.parent("inputs");
+  part2Input1.parent("inputs");
   //hides part2 elements
   part2P.hide();
   part2Input1.hide();
+
 }
 
 
@@ -161,13 +166,13 @@ function part2() {
     fill(4, 7, 8);
     textSize(15);
     //upper left text
-    text("51", 30, 20);
+    text("51", 30, 30);
     //upper right text
-    text("st", 370, 20);
+    text("st", width1-75, 30);
     //lower left text
-    text("US", 30, 380);
+    text("US", 30, 370);
     //lower right text
-    text("City", 370, 380);
+    text("City", width1-90, 370);
     //shows html elements
     part2P.show();
     part2Input1.show();
@@ -180,9 +185,9 @@ function part3Setup() {
   part3P2 = createP("Min");
   part3P3 = createP("Max");
   //insets them into  div
-  part3P1.parent("AfterSketchPart1");
-  part3P2.parent("AfterSketchPart1");
-  part3P3.parent("AfterSketchPart1");
+  part3P1.parent("inputs");
+  part3P2.parent("inputs");
+  part3P3.parent("inputs");
   //hides part3 elements
   part3P1.hide();
   part3P2.hide();
@@ -204,7 +209,8 @@ function part4Setup() {
   //part4
   part4P = createP("Now how have you managed to solve this puzzle? Whether or not you did it legit, CONGRATS!");
   //insert them into div 
-  part4P.parent("AfterSketchPart1");
+	part4P.class('text');
+  part4P.parent("inputs");
   //hides part 4 element
   part4P.hide();
 
