@@ -15,6 +15,7 @@ let bool = false;
 let bgRColorInput, bgBColorInput, bgGColorInput;
 
 let width1;
+
 function setup() {
   var canvasDiv = document.getElementById('centersketch');
   width1 = canvasDiv.clientWidth;
@@ -61,7 +62,7 @@ function setup() {
 
   //clues below canvas
   clue1 = createElement("h3", "16, 49, 64");
-	clue1.parent('foottext');
+  clue1.parent('foottext');
   //part1
   part1Setup();
   //part2 
@@ -80,10 +81,10 @@ function draw() {
   rectMode(CENTER);
   //rectangle
   fill(rectColor);
-  rect((width1-40)/2, 200, sldr2.value(), sldr3.value());
+  rect((width1 - 40) / 2, 200, sldr2.value(), sldr3.value());
   //circle
   fill(circleColor);
-  circle((width1-40)/2, 200, sldr1.value());
+  circle((width1 - 40) / 2, 200, sldr1.value());
   //first part of easter egg
   part1();
   //second part of easter egg
@@ -111,8 +112,8 @@ function part1Setup() {
   part1Input4.size(50);
   part1Input5.size(50);
   //inserts them into div 
-	part1Link.class('links');
-	part1P.class('text')
+  part1Link.class('links');
+  part1P.class('text')
   part1P.parent('inputs');
   part1Link.parent('inputs');
   part1Input1.parent('inputs');
@@ -132,7 +133,7 @@ function part1Setup() {
 
 function part1() {
   if (bgRColorInput.value() == "4" && bgGColorInput.value() == "7" && bgBColorInput.value() == "8") {
-  
+
     part1P.show();
     part1Link.show();
     part1Input1.show();
@@ -148,7 +149,7 @@ function part2Setup() {
   part2P = createP("Nice Job! Now can you find the next clue?");
   part2Input1 = createInput("");
   part2Input1.size(127.5);
-	part2P.class('text');
+  part2P.class('text');
   //inserts them into div 
   part2P.parent("inputs");
   part2Input1.parent("inputs");
@@ -168,11 +169,11 @@ function part2() {
     //upper left text
     text("51", 30, 30);
     //upper right text
-    text("st", width1-75, 30);
+    text("st", width1 - 75, 30);
     //lower left text
     text("US", 30, 370);
     //lower right text
-    text("City", width1-90, 370);
+    text("City", width1 - 90, 370);
     //shows html elements
     part2P.show();
     part2Input1.show();
@@ -209,7 +210,7 @@ function part4Setup() {
   //part4
   part4P = createP("Now how have you managed to solve this puzzle? Whether or not you did it legit, CONGRATS!");
   //insert them into div 
-	part4P.class('text');
+  part4P.class('text');
   part4P.parent("inputs");
   //hides part 4 element
   part4P.hide();

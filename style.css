@@ -20,10 +20,9 @@ body {
   margin-top: 15px;
   flex: 1 87.8% auto;
   display: inline-block;
-text-align: center;
+  text-align: center;
 }
 h1.head {
-  
   font-family: "Arial Black";
   color: #000000;
   line-height: .8;
@@ -34,7 +33,6 @@ h3 {
   font-family: "Arial Black";
   color: #ffffff;
   font-style: none;
-
 }
 #centersketch {
   width: 85.18%;
@@ -51,7 +49,6 @@ h3 {
   justify-content: center;
   padding-right: 20px;
 }
-
 #inputs {
   width: 85.18%;
   height: 8000px;
@@ -81,9 +78,7 @@ h3 {
   padding-left: 20px;
   justify-content: center;
   padding-right: 20px;
-
 }
-
 .foot {
   height: 150px;
   background-color: #b2b2b2;
@@ -91,8 +86,6 @@ h3 {
   text-align: center;
   align-content: center;
 }
-
-
 #foottext {
   justify-content: center;
   text-align: center;
@@ -104,79 +97,66 @@ h3 {
   font-style: italic;
   text-decoration: none;
 }
-
-.input {   
-    height: 20px;
-    position: relative;
-    left: 0;
-	margin-top: 20px;
-    outline: none;
-    border: 1px solid #cdcdcd;
-    border-color: #b2b2b2;
-    background-color: white;
-    font-size: 16px;
-}
-
-.slider {
-  -webkit-appearance: none;  
-  appearance: none;
-  width: 33%; 
-  height: 20px; 
-	border-radius: 5px;  
-  background: #b2b2b2; 
+.input {
+  height: 20px;
+  position: relative;
+  left: 0;
+  margin-top: 20px;
   outline: none;
- 
- /* -webkit-transition: .2s; */
+  border: 1px solid #cdcdcd;
+  border-color: #b2b2b2;
+  background-color: white;
+  font-size: 16px;
+}
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 33%;
+  height: 20px;
+  border-radius: 5px;
+  background: #b2b2b2;
+  outline: none;
+  /* -webkit-transition: .2s; */
   transition: opacity .2s;
-text-align: center;
-}	
-
+  text-align: center;
+}
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 25px;
   height: 25px;
-  border-radius: 50%; 
+  border-radius: 50%;
   background: black;
   cursor: pointer;
 }
-
 #slide1 {
-	width: 100%;
+  width: 100%;
 }
-
 #box1 {
-	display: flex;
-	flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
-
 #in1 {
-	flex-grow: 1;
-	justify-content: center;
-	
+  flex-grow: 1;
+  justify-content: center;
 }
-
 #in2 {
-	flex-grow: 1;
-	justify-content: center;
-	
+  flex-grow: 1;
+  justify-content: center;
 }
 #in3 {
-	flex-grow: 1;
-	justify-content: center;
-	
+  flex-grow: 1;
+  justify-content: center;
 }
-
-.links {target: _blank;
-	
-	 font-family: Arial;
+.links {
+  target: _blank;
+  font-family: Arial;
   color: #000000;
-font-size: 20px;
-	text-decoration: none;
-
+  font-size: 20px;
+  text-decoration: none;
 }
-
-.text {font-family: Arial;
+.text {
+  font-family: Arial;
   color: #000000;
-	font-size: 20px;
+  font-size: 20px;
 }
