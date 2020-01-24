@@ -1,3 +1,18 @@
+/*
+Step 1: Take the square root of the numbers in the footer. Input each result in the corresponding R, G , B input boxes underneath the sliders. 
+
+Step 2: These numbers correspond to a date (m/d/y) click on the link and search the date on the website. Click the result containing the lottery numbers. 
+
+Step 3: Input the "Take 5" lottery numbers into the five input boxes below the link. 
+
+Step 4: Change at least one RGB value of the background. 
+
+Step 5: Google the 4 words together as a single term, with neccessary spaces. Hint: (51st largest city in the US)*Use wikipedia. Insert the result into the input box. 
+
+Step 6: Set the first slider to Max, second to Min, third to Max, and set the rgb inputs to 255, 0, 255. 
+
+Step 7: Profit!
+*/
 let sldr1, sldr2, sldr3;
 let clue1;
 let circleColor, rectColor;
